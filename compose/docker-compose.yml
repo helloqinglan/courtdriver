@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+  courtcrawler1:
+    image: "courtcrawler:1.0.3"
+    container_name: courtcrawler1
+    restart: always
+
+  courtcrawler2:
+    image: "courtcrawler:1.0.3"
+    container_name: courtcrawler2
+    restart: always
+
+  courtcrawler3:
+    image: "courtcrawler:1.0.3"
+    container_name: courtcrawler3
+    restart: always
+
+  courtcrawler4:
+    image: "courtcrawler:1.0.3"
+    container_name: courtcrawler4
+    restart: always
+
+  courtcrawler5:
+    image: "courtcrawler:1.0.3"
+    container_name: courtcrawler5
+    restart: always
+
+  courtcrawler6:
+    image: "courtcrawler:1.0.3"
+    container_name: courtcrawler6
+    restart: always
+
+  courtcrawler7:
+    image: "courtcrawler:1.0.3"
+    container_name: courtcrawler7
+    restart: always

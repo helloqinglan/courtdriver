@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.domoes.services";
+option java_outer_classname = "HanLPServiceProto";
+option objc_class_prefix = "HanLP";
+
+package hanlp;
+
+service HanLP {
+    rpc Segment (SegmentRequest) returns (SegmentResponse) {}
+}
+
+message SegmentRequest {
+    // 要分词的句子
+    string value = 1;
+
+    // 分词方法
+    enum Method {
+        None = 0;
+        Viterbi = 1;
+        CRF = 2;
+        Perceptron = 4;
+        BaiduNLP = 8;
+        ALL = 15;
+    }
+    int32 method = 2;
+
+    // 请求分词的文书id
+    string docid = 3;
+}
+
+message SegmentResponse {
+    // 返回json串 (根据请求时指定的服务类型填充字段)
+    string viterbiValue = 1;
+    string crfValue = 2;
+    string perceptronValue = 3;
+    string baiduValue = 4;
+}
